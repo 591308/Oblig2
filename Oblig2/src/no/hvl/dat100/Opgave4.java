@@ -20,19 +20,19 @@ public class Oppgave4 {
 		}
 		if ((bruttoinntekt >= 164101) && (bruttoinntekt <= 230950)) {
 			bruttoinntekt = (double) (0.0093*(bruttoinntekt-164100));
-			showMessageDialog(null, "Trinnskatten er: " + trinn1 + "%" + " og skatten blir lik " + bruttoinntekt);
+			showMessageDialog(null, "Trinnskatten er: " + trinn1 + "%" + " og skatten blir lik " + bruttoinntekt + " kroner");
 		}
 		if ((bruttoinntekt >= 230951) && (bruttoinntekt <= 580650 )) {
 			bruttoinntekt = (double) (0.0241*(bruttoinntekt-164100));
-			showMessageDialog(null, "Trinnskatten er: " + trinn2 + "%" + " og skatten blir lik " + bruttoinntekt);
+			showMessageDialog(null, "Trinnskatten er: " + trinn2 + "%" + " og skatten blir lik " + bruttoinntekt + " kroner");
 		}
 		if ((bruttoinntekt >= 580651) && (bruttoinntekt <= 934050)) {
 			bruttoinntekt = (double) (0.1152*(bruttoinntekt-164100));
-			showMessageDialog(null, "Trinnskatten er: " + trinn3 + "%" + " og skatten blir lik " + bruttoinntekt);
+			showMessageDialog(null, "Trinnskatten er: " + trinn3 + "%" + " og skatten blir lik " + bruttoinntekt + " kroner");
 		}
 		if (bruttoinntekt >= 934051) {
 			bruttoinntekt = (double) (0.1452*(bruttoinntekt-164100));
-			showMessageDialog(null, "Trinnskatten er: " + trinn4 + "%" + " og skatten blir lik " + bruttoinntekt);
+			showMessageDialog(null, "Trinnskatten er: " + trinn4 + "%" + " og skatten blir lik " + bruttoinntekt + " kroner");
 		}
 		if (bruttoinntekt <= 0) {
 			showMessageDialog(null, "Ugyldig tall");
