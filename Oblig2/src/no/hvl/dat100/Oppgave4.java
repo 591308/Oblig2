@@ -7,7 +7,7 @@ public class Oppgave4 {
 	public static void main(String[] args) {
 		String tallTxt = showInputDialog("Skriv inn bruttoinntekt: ");
 		
-		int bruttoinntekt = parseInt(tallTxt);
+		double bruttoinntekt = parseInt(tallTxt);
 		
 		double trinn0 = 0.00;
 		double trinn1 = 0.93;
@@ -16,19 +16,23 @@ public class Oppgave4 {
 		double trinn4 = 14.52;
 		
 		if ((bruttoinntekt > 0) && (bruttoinntekt <= 164100)) {
-			showMessageDialog(null, "Trinnskatten er: " + trinn0 + "%");
+			showMessageDialog(null, "Trinnskatten er: " + trinn0 + "%" + " og skatten blir lik 0");
 		}
 		if ((bruttoinntekt >= 164101) && (bruttoinntekt <= 230950)) {
-			showMessageDialog(null, "Trinnskatten er: " + trinn1 + "%");
+			bruttoinntekt = (double) (0.0093*(bruttoinntekt-164100));
+			showMessageDialog(null, "Trinnskatten er: " + trinn1 + "%" + " og skatten blir lik " + bruttoinntekt);
 		}
 		if ((bruttoinntekt >= 230951) && (bruttoinntekt <= 580650 )) {
-			showMessageDialog(null, "Trinnskatten er: " + trinn2 + "%");
+			bruttoinntekt = (double) (0.0241*(bruttoinntekt-164100));
+			showMessageDialog(null, "Trinnskatten er: " + trinn2 + "%" + " og skatten blir lik " + bruttoinntekt);
 		}
 		if ((bruttoinntekt >= 580651) && (bruttoinntekt <= 934050)) {
-			showMessageDialog(null, "Trinnskatten er: " + trinn3 + "%");
+			bruttoinntekt = (double) (0.1152*(bruttoinntekt-164100));
+			showMessageDialog(null, "Trinnskatten er: " + trinn3 + "%" + " og skatten blir lik " + bruttoinntekt);
 		}
 		if (bruttoinntekt >= 934051) {
-			showMessageDialog(null, "Trinnskatten er: " + trinn4 + "%");
+			bruttoinntekt = (double) (0.1452*(bruttoinntekt-164100));
+			showMessageDialog(null, "Trinnskatten er: " + trinn4 + "%" + " og skatten blir lik " + bruttoinntekt);
 		}
 		if (bruttoinntekt <= 0) {
 			showMessageDialog(null, "Ugyldig tall");
